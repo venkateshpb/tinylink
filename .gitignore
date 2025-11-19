@@ -1,0 +1,25 @@
+﻿# Node & build
+node_modules/
+.next/
+dist/
+
+# Env
+.env
+.env.local
+.env.*.local
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+*.log
+
+# Prisma
+dev.db
+prisma/migrations/
+
+# Package locks (optional to ignore)
+# package-lock.json
+
+# Misc
+coverage/

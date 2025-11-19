@@ -1,0 +1,22 @@
+# create styles folder if it doesn't exist
+if (!(Test-Path -Path .\styles)) { New-Item -ItemType Directory -Path .\styles | Out-Null }
+
+# create globals.css with correct content
+@"
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#__next {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: #f9fafb;
+}
+"@ | Set-Content -LiteralPath .\styles\globals.css -Encoding UTF8
+
