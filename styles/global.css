@@ -1,4 +1,4 @@
-# create styles folder if it doesn't exist
+
 if (!(Test-Path -Path .\styles)) { New-Item -ItemType Directory -Path .\styles | Out-Null }
 
 # create globals.css with correct content
